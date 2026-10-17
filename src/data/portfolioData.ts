@@ -112,7 +112,7 @@ export const PORTFOLIO_DATA = {
       logo: swiftlyLogo,
       liveUrl: 'https://swiftlyxpress.com',
       technologies: [
-        'Next.js', 'React Native', 'Ionic', 'Tailwind CSS', 'AWS', 'Cloudflare',
+        'Next.js', 'React Native', 'Ionic', 'Tailwind CSS', 'Zustand', 'AWS', 'Cloudflare',
         'Google Maps', 'Twilio', 'Paystack', 'MongoDB', 'PostgreSQL',
       ],
     },
@@ -129,7 +129,7 @@ export const PORTFOLIO_DATA = {
       logoIsWordmark: true,
       logoBg: '#1C1917',
       liveUrl: 'https://eatfraiche.com',
-      technologies: ['Next.js', 'Tailwind CSS', 'Paystack'],
+      technologies: ['Next.js', 'Tailwind CSS', 'Zustand', 'Paystack'],
     },
     {
       id: 'praci',
@@ -144,7 +144,7 @@ export const PORTFOLIO_DATA = {
       logoIsWordmark: true,
       logoBg: '#FFFFFF',
       liveUrl: 'https://praci.io',
-      technologies: ['Next.js', 'Jest', 'Git', 'AWS'],
+      technologies: ['Next.js', 'Tailwind CSS', 'Zustand', 'Jest', 'Git', 'AWS'],
     },
     {
       id: 'applift',
@@ -159,7 +159,7 @@ export const PORTFOLIO_DATA = {
       logoIsWordmark: true,
       logoBg: '#0F172A',
       liveUrl: 'https://applift.xyz',
-      technologies: ['Next.js', 'Tailwind CSS'],
+      technologies: ['Next.js', 'Tailwind CSS', 'Zustand'],
     },
   ] as Project[],
 
