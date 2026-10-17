@@ -1,6 +1,6 @@
 # DivineJustice Anthony Samuel · Portfolio
 
-Personal portfolio of a Software Engineer & Cloud Solutions Architect, covering web, mobile, and cloud work.
+Personal portfolio of a Senior Frontend & Mobile Engineer, covering web, mobile, and cloud work.
 
 Built with React 19, TypeScript, Vite, Tailwind CSS v4, and Motion.
 

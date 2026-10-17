@@ -67,7 +67,7 @@ export const ProjectShowcase: React.FC = () => {
         {/* Project Row: one straight line. 4 across on desktop; swipeable row with snap on smaller screens */}
         <motion.div
           layout
-          className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0 lg:pb-0 lg:grid lg:grid-cols-4 lg:overflow-visible"
+          className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 xl:mx-0 xl:px-0 xl:pb-0 xl:grid xl:grid-cols-5 xl:overflow-visible"
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project) => (
@@ -79,7 +79,7 @@ export const ProjectShowcase: React.FC = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
                 onClick={() => openProject(project)}
-                className={`group relative w-[82%] sm:w-[46%] md:w-[38%] shrink-0 snap-start lg:w-auto rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 hover:border-purple-500/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden ${
+                className={`group relative w-[82%] sm:w-[46%] md:w-[38%] lg:w-[30%] shrink-0 snap-start xl:w-auto rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 hover:border-purple-500/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden ${
                   project.liveUrl ? 'cursor-pointer' : ''
                 }`}
               >

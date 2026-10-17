@@ -76,7 +76,7 @@ export interface Testimonial {
 export const PORTFOLIO_DATA = {
   profile: {
     name: 'DivineJustice Samuel',
-    role: 'Lead Full-Stack & Distributed Systems Architect',
+    role: 'Senior Frontend & Mobile Engineer',
     bio: 'Crafting resilient cloud-native architectures, low-latency streaming applications, and pixel-precise digital interfaces with modern purple and charcoal aesthetics.',
     location: 'London, UK / Remote Worldwide',
     email: 'samueldivine2021@gmail.com',
@@ -92,6 +92,7 @@ export const PORTFOLIO_DATA = {
     ],
     socials: [
       { name: 'GitHub', url: 'https://github.com/amdeejhay', username: 'github.com/amdeejhay' },
+      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/DivineJustice-Samuel', username: 'in/DivineJustice-Samuel' },
       { name: 'X (Twitter)', url: 'https://x.com/awscloudboy', username: '@awscloudboy' },
       // Discord has no public profile URL by username, so the card copies it instead
       { name: 'Discord', url: '', username: '@amdeejhay' },
@@ -101,19 +102,61 @@ export const PORTFOLIO_DATA = {
 
   projects: [
     {
+      id: 'praci',
+      title: 'Praci',
+      categories: ['Web', 'Mobile', 'Management'],
+      role: 'Frontend Engineer',
+      period: '2026 – Present',
+      location: 'UK // Remote',
+      description:
+        'One workforce platform connecting staffing agencies with the businesses they supply: rota, attendance, timesheets, payroll, invoicing, and compliance in a single place, on web and mobile.',
+      logo: praciLogo,
+      logoIsWordmark: true,
+      logoBg: '#FFFFFF',
+      liveUrl: 'https://praci.io',
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Zustand', 'Jest', 'Git', 'AWS'],
+    },
+    {
+      id: 'applift',
+      title: 'Applift Labs',
+      categories: ['Web', 'Consultancy'],
+      role: 'Frontend Engineer',
+      period: '2023 – Present',
+      location: 'Uyo, Nigeria',
+      description:
+        'Software development studio building for founders, SMEs, and businesses across Africa: MVPs, custom platforms, and internal tools, with strategy, design, and engineering handled end to end.',
+      logo: appliftLogo,
+      logoIsWordmark: true,
+      logoBg: '#0F172A',
+      liveUrl: 'https://applift.xyz',
+      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Zustand'],
+    },
+    {
+      id: 'patnaar',
+      title: 'Patnaar',
+      categories: ['Mobile', 'Fintech'],
+      role: 'Mobile Engineer',
+      period: '02/2026 – 03/2026',
+      location: 'Nigeria',
+      description:
+        'All-in-one payroll and team payment platform that simplifies how businesses send, track, and manage employee payouts. Built the mobile app and its cloud infrastructure.',
+      // liveUrl: 'https://…',  // add when public
+      technologies: ['React Native', 'Zustand', 'AWS'],
+    },
+    {
       id: 'swiftlyxpress',
       title: 'SwiftlyXpress',
       categories: ['Web', 'Mobile', 'Delivery'],
-      role: 'Frontend Developer & Cloud Engineer',
-      period: '2025 – 2026',
-      location: 'Nigeria',
+      role: 'Lead Frontend Engineer',
+      period: '09/2025 – 2026',
+      location: 'Uyo, Nigeria',
       description:
-        'Last-mile delivery platform with customer and rider apps: real-time GPS tracking, automated routing, and instant digital proof of delivery that keep shipments secure for individual and commercial vendors.',
+        'Last-mile delivery platform with customer and rider apps: booking, real-time GPS tracking and order updates, automated routing, and instant digital proof of delivery that keep shipments secure for individual and commercial vendors.',
       logo: swiftlyLogo,
       liveUrl: 'https://swiftlyxpress.com',
       technologies: [
-        'Next.js', 'React Native', 'Ionic', 'Tailwind CSS', 'Zustand', 'AWS', 'Cloudflare',
-        'Google Maps', 'Twilio', 'Paystack', 'MongoDB', 'PostgreSQL',
+        'Next.js', 'TypeScript', 'Ionic React', 'React Native', 'Vite', 'Tailwind CSS', 'Zustand', 'WebSockets',
+        'Google Maps', 'Twilio', 'Paystack', 'AWS', 'Cloudflare', 'MongoDB', 'PostgreSQL',
       ],
     },
     {
@@ -121,51 +164,21 @@ export const PORTFOLIO_DATA = {
       title: 'Fraîche',
       categories: ['Web', 'Food'],
       role: 'Frontend Developer',
-      period: '2023 – 2024',
-      location: 'Akwa Ibom, Nigeria',
+      period: '2024 – 2025',
+      location: 'Uyo, Nigeria',
       description:
         'African flavours. Freshly prepared. Delivered to you. Website for Fraîche Restaurant, a modern dining spot serving authentic African cuisine, local Akwa Ibom delicacies, and classic Nigerian dishes.',
       logo: fraicheLogo,
       logoIsWordmark: true,
       logoBg: '#1C1917',
       liveUrl: 'https://eatfraiche.com',
-      technologies: ['Next.js', 'Tailwind CSS', 'Zustand', 'Paystack'],
-    },
-    {
-      id: 'praci',
-      title: 'Praci',
-      categories: ['Web', 'Mobile', 'Management'],
-      role: 'Frontend Engineer',
-      period: '2026 – Present',
-      location: 'UK',
-      description:
-        'One workforce platform connecting staffing agencies with the businesses they supply: rota, attendance, timesheets, payroll, invoicing, and compliance in a single place, on web and mobile.',
-      logo: praciLogo,
-      logoIsWordmark: true,
-      logoBg: '#FFFFFF',
-      liveUrl: 'https://praci.io',
-      technologies: ['Next.js', 'Tailwind CSS', 'Zustand', 'Jest', 'Git', 'AWS'],
-    },
-    {
-      id: 'applift',
-      title: 'Applift Labs',
-      categories: ['Web', 'Consultancy'],
-      role: 'Frontend & Cloud Engineer',
-      period: '2024 – 2026',
-      location: 'Nigeria',
-      description:
-        'Software development studio building for founders, SMEs, and businesses across Africa: MVPs, custom platforms, and internal tools, with strategy, design, and engineering handled end to end.',
-      logo: appliftLogo,
-      logoIsWordmark: true,
-      logoBg: '#0F172A',
-      liveUrl: 'https://applift.xyz',
-      technologies: ['Next.js', 'Tailwind CSS', 'Zustand'],
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Zustand', 'Paystack'],
     },
   ] as Project[],
 
   experience: [
     {
-      role: 'Frontend Developer',
+      role: 'Senior Frontend Engineer',
       period: '2023 — Present',
       type: 'Web',
       description:
@@ -179,11 +192,11 @@ export const PORTFOLIO_DATA = {
       skills: ['Next.js', 'React', 'TypeScript', 'Vue.js', 'Tailwind CSS', 'Jest', 'Vite'],
     },
     {
-      role: 'Mobile Developer',
+      role: 'Mobile Engineer',
       period: '2025 — Present',
       type: 'iOS & Android',
       description:
-        'I have built customer and rider apps for a last-mile delivery service: customers book and track packages live, while riders receive jobs, follow routes, and capture proof of delivery. I build cross-platform with React Native and Ionic, so one codebase ships to both iOS and Android.',
+        'I have built mobile apps for a payroll and team-payments platform, where businesses send, track, and manage employee payouts, and for a last-mile delivery service, where customers book and track packages live while riders receive jobs, follow routes, and capture proof of delivery. I build cross-platform with React Native and Ionic, so one codebase ships to both iOS and Android.',
       achievements: [
         'Build iOS and Android apps from a single React Native or Ionic codebase.',
         'Add live GPS tracking, maps, and route guidance with Google Maps.',

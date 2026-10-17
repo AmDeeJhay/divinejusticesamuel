@@ -10,6 +10,10 @@ export interface ResumeEntry {
   date?: string;
   location?: string;
   description?: string;
+  /** Detailed format: concrete work done, one bullet each */
+  bullets?: string[];
+  /** Rendered as "Tech: …" under the bullets */
+  tech?: string;
 }
 
 export interface ResumeSkill {
@@ -26,7 +30,7 @@ export const RESUME = {
   pdf: undefined as string | undefined,
 
   name: 'Divine-Justice Anthony Samuel',
-  headline: 'Frontend Developer',
+  headline: 'Senior Frontend & Mobile Engineer',
   contact: {
     email: 'samueldivine2021@gmail.com',
     phone: '07044573745',
@@ -37,52 +41,80 @@ export const RESUME = {
   },
 
   profile:
-    'I am a Frontend Engineer. I work with organisations and individuals to deliver quality software product and create visually appealing responsive web pages that meets client requirements. I Engineered innovative web platform that propelled competitive edge, leading to a 40% increase in user engagement and a 30% growth in conversion rates.',
+    'Senior Frontend & Mobile Engineer with 4+ years of experience building production web and mobile products across logistics, payroll and payments, workforce management, food, and business software. I work in React, Next.js, TypeScript, Vue, React Native and Ionic, and own delivery from interface architecture to cloud deployment on AWS. I engineered a web platform that drove a 40% increase in user engagement and a 30% growth in conversion rates.',
 
   experience: [
     {
-      title: 'Frontend Developer,',
-      org: 'Reggie',
-      date: '10/2023 – 12/2023',
-      location: 'Uyo, Nigeria.',
-      description:
-        'I was hired by the organization to build a business management system. I worked as the Lead Frontend Developer on the team, Assisted with day-to-day operations, working efficiently and productively with all team members.',
+      title: 'Praci | Frontend Engineer',
+      subtitle: 'praci.io',
+      url: 'https://praci.io',
+      date: '2026 – present',
+      location: 'UK | Remote',
+      bullets: [
+        'Build product features for a workforce platform connecting staffing agencies with the businesses they supply, covering rota, attendance, timesheets, payroll, invoicing and compliance.',
+        'Develop responsive, maintainable interfaces in Next.js and TypeScript, with Zustand for application state and Jest tests for reliability.',
+        'Monitor deployments and handle cloud configuration on AWS so releases reach production smoothly.',
+      ],
+      tech: 'Next.js, TypeScript, Tailwind CSS, State Management (Zustand), Jest, Git, AWS',
     },
     {
-      title: 'Frontend Developer,',
-      org: 'AppLift Technologies Limited.',
-      subtitle: 'Applift',
+      title: 'AppLift Technologies Limited | Frontend Engineer',
+      subtitle: 'applift.xyz',
       url: 'https://applift.xyz',
       date: '2023 – present',
       location: 'Uyo, Nigeria',
-      description:
-        'As a co-founder, I assisted the team in building the software. My role in Applift was reaching out to clients to pitch potential software solutions for their businesses.',
+      bullets: [
+        'Helped build the product and engineering side of a software studio delivering MVPs, custom platforms and internal tools for founders, SMEs and businesses across Africa.',
+        'Build client products end to end with Next.js and Tailwind CSS, from interface architecture through to cloud deployment.',
+        'Lead client engagement: pitching software solutions to businesses, scoping requirements and translating business needs into product plans.',
+      ],
+      tech: 'Next.js, React, TypeScript, Tailwind CSS, State Management (Zustand)',
     },
     {
-      title: 'Lead Frontend Engineer',
-      subtitle: 'Swiftly Xpress',
-      url: 'https://swiftlyxpress.com',
-      date: '09/2025 – 2026',
-      location: 'Uyo',
-      description:
-        'I Architected and developed a production-grade logistics platform serving real users, building a scalable and responsive user interface using Next.js/TS and Ionic React + Vite with modern frontend architecture. Implemented core features including booking systems, user authentication, dashboard management, and real-time ride and order updates using WebSockets. Integrated third-party services such as payment gateways, email notifications, and chat support, while improving performance through optimized rendering and efficient state management. Deployed the application using cloud infrastructure and managed production releases and updates.',
-    },
-    {
-      title: 'Frontend Developer',
-      subtitle: 'Fraiche Palace',
-      url: 'https://eatfraiche.com',
-      date: '2024 – 2025',
-      location: 'Uyo',
-      description:
-        'Contributed to the building of fraiche palace site using Next.Js and typescript. Worked closely with the UI/UX team and collaborated with the backend developer on the project.',
-    },
-    {
-      title: 'Mobile Developer',
-      subtitle: 'Patnaar',
+      title: 'Patnaar | Mobile Engineer',
       date: '02/2026 – 03/2026',
       location: 'Nigeria',
-      description:
-        'I was hired by the Organisation to build the Patnaar Mobile App as well as the cloud infrastructure of the application. Patnaar is an all-in-one payroll and team payment platform designed to simplify how businesses send, track, and manage employee payouts.',
+      bullets: [
+        'Built the Patnaar mobile app, an all-in-one payroll and team payment platform that simplifies how businesses send, track and manage employee payouts.',
+        'Set up and managed the cloud infrastructure behind the application alongside the mobile build.',
+      ],
+    },
+    {
+      title: 'Swiftly Xpress | Lead Frontend Engineer',
+      subtitle: 'swiftlyxpress.com',
+      url: 'https://swiftlyxpress.com',
+      date: '09/2025 – 2026',
+      location: 'Uyo, Nigeria',
+      bullets: [
+        'Architected and built a production-grade last-mile logistics platform serving real users, with customer and rider experiences on web and mobile.',
+        'Built a scalable, responsive UI with Next.js/TypeScript and Ionic React + Vite on a modern frontend architecture.',
+        'Implemented booking, user authentication, dashboard management, and real-time ride and order updates over WebSockets.',
+        'Integrated payment gateways, email notifications and chat support, and improved performance through optimised rendering and efficient state management.',
+        'Deployed the application on cloud infrastructure and managed production releases and updates.',
+      ],
+      tech: 'Next.js, TypeScript, Ionic React, React Native, Vite, Tailwind CSS, State Management (Zustand), WebSockets, Google Maps, Twilio, Paystack, MongoDB, PostgreSQL, AWS, Cloudflare',
+    },
+    {
+      title: 'Fraiche Palace | Frontend Developer',
+      subtitle: 'eatfraiche.com',
+      url: 'https://eatfraiche.com',
+      date: '2024 – 2025',
+      location: 'Uyo, Nigeria',
+      bullets: [
+        'Built the Fraîche restaurant website with Next.js and TypeScript, presenting authentic African cuisine, local Akwa Ibom delicacies and classic Nigerian dishes.',
+        'Translated UI/UX designs into responsive, production-ready pages, working closely with the design team.',
+        'Collaborated with the backend developer to integrate APIs and online payments.',
+      ],
+      tech: 'Next.js, TypeScript, Tailwind CSS, State Management (Zustand), Paystack',
+    },
+    {
+      title: 'Reggie | Lead Frontend Developer',
+      date: '10/2023 – 12/2023',
+      location: 'Uyo, Nigeria',
+      bullets: [
+        'Led frontend development of a business management system as the Lead Frontend Developer on the team.',
+        'Supported day-to-day delivery and operations, working efficiently and productively with all team members.',
+      ],
     },
   ] as ResumeEntry[],
 
@@ -105,6 +137,7 @@ export const RESUME = {
     right: [
       { name: 'Time management and Organizational skill' },
       { name: 'UI and UX Assurance.' },
+      { name: 'Community Lead and Community Management' },
       {
         name: 'Serverless API & Frontend Deployment (TypeScript + AWS Lambda + Terraform)',
         description:
@@ -123,7 +156,19 @@ export const RESUME = {
   education: [
     { title: 'Cloud Practitioner', subtitle: 'AWS Skill builder', date: '2024', location: 'Nigeria' },
     { title: 'Cloud Engineer', subtitle: 'Cloud with Anne Academy', date: '2025', location: 'Nigeria' },
-    { title: 'AWS Student Builder Group Leader', subtitle: 'University of Uyo', date: '03/2025 – 03/2026', location: 'Uyo, Nigeria' },
+    {
+      title: 'AWS Student Builder Group Leader',
+      subtitle: 'University of Uyo',
+      date: '03/2025 – 03/2026',
+      location: 'Uyo, Nigeria',
+      description: 'Led the campus cloud community and hosted AWS Student Community Day.',
+    },
+    {
+      title: 'AI/ML Lead, Google Developer Groups on Campus',
+      subtitle: 'University of Uyo',
+      location: 'Uyo, Nigeria',
+      description: 'Led the AI/ML track, running sessions and study jams for the campus developer community.',
+    },
     {
       title: 'Meta Frontend Development',
       subtitle: 'Coursera',
@@ -139,6 +184,20 @@ export const RESUME = {
     },
     { title: 'Cybersecurity', subtitle: 'Elcharis Initiative for Africa', date: '2023', location: 'Uyo, Nigeria' },
     { title: 'First Degree, Computer Engineering', subtitle: 'University of Uyo', location: 'Uyo, Nigeria' },
+  ] as ResumeEntry[],
+
+  projects: [
+    {
+      title: 'Static Website Deployment on AWS',
+      date: '2025',
+      description:
+        'Created a Next.Js app and automated the AWS infrastructure setup using Terraform. Provisioned an S3 bucket, configured CloudFront distribution, and implemented CI/CD for automated deployments.',
+    },
+    {
+      title: 'Building on Aleo Blockchain',
+      subtitle: 'Building and deploying smart contract using Leo',
+      date: '2024',
+    },
   ] as ResumeEntry[],
 
   declaration:

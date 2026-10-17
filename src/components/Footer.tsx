@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Github, Mail } from 'lucide-react';
+import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
 import { FaXTwitter } from 'react-icons/fa6';
 import { Logo } from './Logo.tsx';
 import { PORTFOLIO_DATA } from '../data/portfolioData.ts';
@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
               <Logo markClassName="w-7 h-7" textClassName="text-base" />
             </div>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              Software Engineer &amp; Cloud Solutions Architect.
+              Senior Frontend &amp; Mobile Engineer.
             </p>
           </div>
 
@@ -60,6 +60,15 @@ export const Footer: React.FC = () => {
                 aria-label="GitHub"
               >
                 <Github className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/DivineJustice-Samuel"
+                target="_blank"
+                rel="noreferrer"
+                className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-[#1A2236] hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
               </a>
               <a
                 href="https://x.com/awscloudboy"

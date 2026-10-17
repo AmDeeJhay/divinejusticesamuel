@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaEnvelope, FaPhone, FaLocationDot, FaLinkedin, FaXTwitter, FaGithub, FaLink } from 'react-icons/fa6';
 import { RESUME, ResumeEntry, ResumeSkill } from '../data/resume.ts';
+import signatureImage from '../assets/images/signature.png';
 
 /**
  * The resume as a paper page (black on white, Alegreya serif), matching the main CV.
@@ -14,7 +15,8 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 );
 
 const Entry: React.FC<{ entry: ResumeEntry }> = ({ entry }) => (
-  <div className="flex justify-between gap-6 mb-[0.8em] break-inside-avoid">
+  // Short entries stay whole; long bulleted ones may flow across a page break (bullets themselves don't split)
+  <div className={`flex justify-between gap-6 mb-[0.8em] ${entry.bullets ? '' : 'break-inside-avoid'}`}>
     <div className="min-w-0 max-w-[78%]">
       <div className="font-bold leading-snug">
         {entry.title}
@@ -33,6 +35,18 @@ const Entry: React.FC<{ entry: ResumeEntry }> = ({ entry }) => (
         </div>
       )}
       {entry.description && <p className="leading-[1.3]">{entry.description}</p>}
+      {entry.bullets && (
+        <ul className="list-disc pl-[1.25em] mt-[0.25em] space-y-[0.15em] leading-[1.3]">
+          {entry.bullets.map((b) => (
+            <li key={b} className="break-inside-avoid">{b}</li>
+          ))}
+        </ul>
+      )}
+      {entry.tech && (
+        <p className="leading-[1.3] mt-[0.25em]">
+          <span className="font-bold">Tech:</span> {entry.tech}
+        </p>
+      )}
     </div>
     <div className="shrink-0 text-right leading-snug whitespace-nowrap">
       {entry.date && <div>{entry.date}</div>}
@@ -102,7 +116,7 @@ export const ResumeSheet: React.FC = () => {
 
       <SectionTitle>Professional Experience</SectionTitle>
       {RESUME.experience.map((e) => (
-        <Entry key={e.title + (e.org ?? e.subtitle)} entry={e} />
+        <Entry key={e.title} entry={e} />
       ))}
 
       <SectionTitle>Skills</SectionTitle>
@@ -121,12 +135,20 @@ export const ResumeSheet: React.FC = () => {
         <Entry key={e.title + e.subtitle} entry={e} />
       ))}
 
+      <SectionTitle>Projects</SectionTitle>
+      {RESUME.projects.map((e) => (
+        <Entry key={e.title} entry={e} />
+      ))}
+
       {/* Declaration + signature stay together on one page */}
       <div className="break-inside-avoid">
         <SectionTitle>Declaration</SectionTitle>
         <p className="leading-[1.3]">{RESUME.declaration}</p>
 
-        <div className="ml-auto mt-[4.5em] w-[13em] max-w-full border-t-2 border-black pt-[0.4em] text-right">
+        <div className="ml-auto mt-[1.2em] w-[13em] max-w-full flex justify-center">
+          <img src={signatureImage} alt="Signature" className="h-[3.4em] w-auto" />
+        </div>
+        <div className="ml-auto mt-[0.6em] w-[13em] max-w-full border-t-2 border-black pt-[0.4em] text-right">
           <div className="font-bold">{RESUME.signatory.name}</div>
           <div>{RESUME.signatory.location}</div>
         </div>

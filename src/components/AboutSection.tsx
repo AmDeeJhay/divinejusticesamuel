@@ -34,10 +34,10 @@ export const AboutSection: React.FC = () => (
           About Me
         </div>
         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">
-          Software Engineer &amp; Cloud Solutions Architect
+          Senior Frontend &amp; Mobile Engineer
         </h2>
         <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2 max-w-xl">
-          Building modern web applications, mobile experiences, and scalable cloud infrastructure.
+          Building modern web applications and mobile experiences, backed by scalable cloud infrastructure.
         </p>
       </div>
 
@@ -53,7 +53,7 @@ export const AboutSection: React.FC = () => (
         >
           <div className="space-y-4 text-sm sm:text-base leading-relaxed text-slate-600 dark:text-slate-300">
             <p>
-              I&apos;m <Strong>DivineJustice Anthony Samuel</Strong>, a software engineer who turns ideas into
+              I&apos;m <Strong>DivineJustice Anthony Samuel</Strong>, a senior frontend and mobile engineer who turns ideas into
               production-ready digital products. With <Strong>4+ years</Strong> of professional development experience,
               I work across frontend engineering, mobile development, and cloud infrastructure, with project work
               spanning <Strong>5 industries</Strong>: fintech, delivery, food, management, and consultancy.

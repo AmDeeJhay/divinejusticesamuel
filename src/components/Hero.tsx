@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowRight, FileDown, Github, Globe2, Mail, Terminal } from 'lucide-react';
+import { ArrowRight, FileDown, Github, Globe2, Linkedin, Mail, Terminal } from 'lucide-react';
 import { FaXTwitter } from 'react-icons/fa6';
 import { PORTFOLIO_DATA } from '../data/portfolioData.ts';
 import { ImageWithFallback } from './ImageWithFallback.tsx';
@@ -54,7 +54,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             {/* Lead Narrative */}
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl mb-8">
               Hello, I&apos;m <strong className="text-slate-900 dark:text-white font-semibold">DivineJustice Samuel</strong>. 
-              Lead systems architect and full-stack engineer bridging high-throughput distributed infrastructure with ultra-responsive, pixel-perfect user interfaces.
+              Senior frontend &amp; mobile engineer building fast, reliable web and mobile products, from interface architecture all the way to cloud deployment.
             </p>
 
             {/* Interactive Actions */}
@@ -91,6 +91,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               >
                 <Github className="w-4 h-4" />
                 <span className="hidden sm:inline">GitHub</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/DivineJustice-Samuel"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors flex items-center gap-1.5"
+                title="LinkedIn Profile"
+              >
+                <Linkedin className="w-4 h-4" />
+                <span className="hidden sm:inline">LinkedIn</span>
               </a>
               <a
                 href="https://x.com/awscloudboy"
