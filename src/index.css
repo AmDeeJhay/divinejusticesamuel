@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* Drive dark mode from the .dark class set by ThemeContext, not the OS preference */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.03em;
+  }
+}
+
+/* Custom scrollbar for high-end look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.4);
+}
+
+/* Liquid glass: specular rim light on top, soft refraction shadow below */
+.liquid-glass {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.75),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.25),
+    0 8px 24px -8px rgba(15, 23, 42, 0.18);
+}
+/* Specular highlight that drifts across the glass (moved by useLiquidGlass) */
+.liquid-sheen {
+  background: radial-gradient(40% 120% at 50% 0%, rgba(255, 255, 255, 0.55), transparent 70%);
+  transition: opacity 0.3s ease;
+}
+.dark .liquid-sheen {
+  background: radial-gradient(40% 120% at 50% 0%, rgba(255, 255, 255, 0.08), transparent 70%);
+}
+.dark .liquid-glass {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.04),
+    0 8px 24px -8px rgba(0, 0, 0, 0.6);
+}
+
+/* Subtle glow effects */
+.purple-glow {
+  box-shadow: 0 0 50px -10px rgba(147, 51, 234, 0.25);
+}
+
+.purple-glow-sm {
+  box-shadow: 0 0 25px -5px rgba(147, 51, 234, 0.2);
+}
+
+/* Print styles for downloadable & printable resume modal */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
