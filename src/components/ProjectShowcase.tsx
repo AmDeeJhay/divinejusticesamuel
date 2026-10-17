@@ -64,8 +64,11 @@ export const ProjectShowcase: React.FC = () => {
           })}
         </div>
 
-        {/* Project Grid: 2 columns on desktop, 1 on mobile */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Project Row: one straight line. 4 across on desktop; swipeable row with snap on smaller screens */}
+        <motion.div
+          layout
+          className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0 lg:pb-0 lg:grid lg:grid-cols-4 lg:overflow-visible"
+        >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project) => (
               <motion.div
@@ -76,12 +79,12 @@ export const ProjectShowcase: React.FC = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
                 onClick={() => openProject(project)}
-                className={`group relative rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 hover:border-purple-500/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden ${
+                className={`group relative w-[82%] sm:w-[46%] md:w-[38%] shrink-0 snap-start lg:w-auto rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 hover:border-purple-500/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden ${
                   project.liveUrl ? 'cursor-pointer' : ''
                 }`}
               >
                 {/* Media Container */}
-                <div className="relative aspect-[16/9] overflow-hidden border-b border-slate-200 dark:border-slate-800">
+                <div className="relative aspect-[16/10] overflow-hidden border-b border-slate-200 dark:border-slate-800">
                   <ProjectLogoPanel
                     project={project}
                     className="w-full h-full transition-transform duration-500 group-hover:scale-105"
@@ -99,7 +102,7 @@ export const ProjectShowcase: React.FC = () => {
                 </div>
 
                 {/* Content Details */}
-                <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+                <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
                     {/* Categories */}
                     <div className="flex flex-wrap items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-2">
@@ -111,7 +114,7 @@ export const ProjectShowcase: React.FC = () => {
                       ))}
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white tracking-tight group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white tracking-tight group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
                       {project.title}
                     </h3>
 

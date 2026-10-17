@@ -17,10 +17,10 @@ export const ProjectLogoPanel: React.FC<{ project: Project; className?: string }
         />
         {project.logo && project.logoIsWordmark ? (
           <div
-            className="relative px-7 py-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm"
+            className="relative px-5 py-3 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm"
             style={{ backgroundColor: project.logoBg ?? '#ffffff' }}
           >
-            <img src={project.logo} alt={project.title} className="h-16 w-auto object-contain" />
+            <img src={project.logo} alt={project.title} className="h-11 w-auto max-w-[9rem] object-contain" />
           </div>
         ) : (
         <div className="relative flex items-center gap-3">
@@ -28,14 +28,14 @@ export const ProjectLogoPanel: React.FC<{ project: Project; className?: string }
             <img
               src={project.logo}
               alt=""
-              className="w-14 h-14 rounded-2xl bg-white border border-slate-200 dark:border-slate-700 shadow-sm object-contain"
+              className="w-11 h-11 rounded-xl bg-white border border-slate-200 dark:border-slate-700 shadow-sm object-contain"
             />
           ) : (
-            <span className="w-14 h-14 rounded-2xl bg-purple-600 text-white flex items-center justify-center text-2xl font-bold">
+            <span className="w-11 h-11 rounded-xl bg-purple-600 text-white flex items-center justify-center text-xl font-bold">
               {project.title.charAt(0)}
             </span>
           )}
-          <span className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+          <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
             {project.title}
           </span>
         </div>
