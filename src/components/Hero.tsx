@@ -53,7 +53,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
             {/* Lead Narrative */}
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl mb-8">
-              Hello, I&apos;m <strong className="text-slate-900 dark:text-white font-semibold">Samuel Divine</strong>. 
+              Hello, I&apos;m <strong className="text-slate-900 dark:text-white font-semibold">DivineJustice Samuel</strong>. 
               Lead systems architect and full-stack engineer bridging high-throughput distributed infrastructure with ultra-responsive, pixel-perfect user interfaces.
             </p>
 
@@ -125,7 +125,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               <div className="relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-900">
                 <ImageWithFallback
                   src={profile.heroWorkspace}
-                  alt="Samuel Divine engineering workspace"
+                  alt="DivineJustice Samuel engineering workspace"
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
 
@@ -146,12 +146,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                     >
                       <ImageWithFallback
                         src={profile.avatar}
-                        alt="Samuel Divine portrait"
+                        alt="DivineJustice Samuel portrait"
                         className="w-full h-full object-cover"
                       />
                     </button>
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900 dark:text-white tracking-tight">Samuel Divine</h4>
+                      <h4 className="text-sm font-bold text-slate-900 dark:text-white tracking-tight">DivineJustice Samuel</h4>
                       <p className="text-xs text-purple-600 dark:text-purple-400 font-mono">Software & Systems</p>
                     </div>
                   </div>
@@ -179,7 +179,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                   <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full p-1.5 bg-white dark:bg-[#111827] border-2 border-purple-500 shadow-2xl shadow-purple-900/30">
                     <ImageWithFallback
                       src={profile.avatar}
-                      alt="Samuel Divine portrait, enlarged"
+                      alt="DivineJustice Samuel portrait, enlarged"
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>

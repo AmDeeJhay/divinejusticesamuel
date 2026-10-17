@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236 40">
-  <!-- Amdeejhay logo (light backgrounds). Wordmark uses Geist; falls back to system sans. -->
-  <g transform="translate(4 4)">
-    <rect width="32" height="32" rx="9" fill="#7C3AED"/>
-    <path d="M9 23.5 16 9l7 14.5" fill="none" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="16" cy="19.4" r="2.1" fill="#60A5FA"/>
-  </g>
-  <text x="46" y="29" font-family="Geist, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="25" font-weight="800" letter-spacing="-0.75" fill="#0F172A">Amdeejhay<tspan fill="#2563EB">.</tspan></text>
-</svg>

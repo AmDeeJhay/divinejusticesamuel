@@ -75,7 +75,7 @@ export interface Testimonial {
 
 export const PORTFOLIO_DATA = {
   profile: {
-    name: 'Samuel Divine',
+    name: 'DivineJustice Samuel',
     role: 'Lead Full-Stack & Distributed Systems Architect',
     bio: 'Crafting resilient cloud-native architectures, low-latency streaming applications, and pixel-precise digital interfaces with modern purple and charcoal aesthetics.',
     location: 'London, UK / Remote Worldwide',
@@ -323,7 +323,7 @@ export const PORTFOLIO_DATA = {
   ] as Testimonial[],
 
   resume: {
-    fullName: 'Samuel Divine',
+    fullName: 'DivineJustice Anthony Samuel',
     contact: {
       email: 'samueldivine2021@gmail.com',
       location: 'London, United Kingdom (Open to Global Remote)',
