@@ -228,6 +228,7 @@ export const PORTFOLIO_DATA = {
       role: 'Student Builder Group Leader',
       org: 'AWS Student Builder Group',
       logo: awsSbgLogo,
+      period: '03/2025 — 03/2026',
       description:
         'Led the campus AWS Student Builder Group, building a community where students learn cloud computing by doing, not just reading about it.',
       highlights: [
@@ -321,32 +322,4 @@ export const PORTFOLIO_DATA = {
       rating: 5,
     },
   ] as Testimonial[],
-
-  resume: {
-    fullName: 'DivineJustice Anthony Samuel',
-    contact: {
-      email: 'samueldivine2021@gmail.com',
-      location: 'London, United Kingdom (Open to Global Remote)',
-      portfolio: 'https://samueldivine.dev',
-      github: 'github.com/amdeejhay',
-      x: 'x.com/awscloudboy',
-    },
-    summary:
-      'Accomplished Lead Systems & Full-Stack Architect with 8+ years of engineering excellence building high-throughput distributed services, scalable React frontends, and AI-powered systems. Renowned for combining rigorous computer science fundamentals with modern visual aesthetics, sub-second latency targets, and zero-defect deployments.',
-    education: [
-      {
-        degree: 'B.Sc. (Hons) in Computer Science & Software Engineering',
-        institution: 'University of London',
-        period: '2013 — 2017',
-        grade: 'First Class Honours (Summa Cum Laude)',
-        honors: 'Dean’s Academic Excellence Award, Best Capstone Engineering Project',
-      },
-    ],
-    certifications: [
-      'AWS Certified Solutions Architect – Professional',
-      'Certified Kubernetes Administrator (CKA – Linux Foundation)',
-      'Google Cloud Certified Professional Cloud Architect',
-      'Meta Certified Advanced Full-Stack Software Engineer',
-    ],
-  },
 };
