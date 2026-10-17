@@ -110,7 +110,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                 title="X (Twitter) Profile"
               >
                 <FaXTwitter className="w-4 h-4" />
-                <span className="hidden sm:inline">X</span>
+                <span className="sr-only">X (Twitter)</span>
               </a>
               <a
                 href="mailto:samueldivine2021@gmail.com"

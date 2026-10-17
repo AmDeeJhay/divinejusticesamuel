@@ -49,7 +49,7 @@ export default function App() {
       <div className="min-h-screen bg-white text-slate-900 dark:bg-[#0A0F1C] dark:text-slate-100 transition-colors duration-200 flex flex-col font-sans selection:bg-purple-600 selection:text-white">
         
         {/* Floating Island Navbar (detached from borders) */}
-        <Navbar onOpenResume={() => setIsResumeModalOpen(true)} />
+        <Navbar onOpenResume={() => setIsResumeModalOpen(true)} route={route} />
 
         {/* Main Content Sections */}
         <main className="flex-1">

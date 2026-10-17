@@ -7,12 +7,15 @@ import { Logo } from './Logo.tsx';
 
 interface NavbarProps {
   onOpenResume: () => void;
+  /** Current page; on the projects page "Works" stays active */
+  route?: 'home' | 'projects';
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, route = 'home' }) => {
   const { theme, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
+  const [scrollSection, setActiveSection] = useState('hero');
+  const activeSection = route === 'projects' ? 'projects' : scrollSection;
   const { scrollYProgress } = useScroll();
   const glass = useLiquidGlass();
 
@@ -169,7 +172,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                       setMobileMenuOpen(false);
                       if (link.action) link.action();
                     }}
-                    className="py-2.5 px-3 rounded-xl text-slate-700 dark:text-slate-200 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-slate-800/70 transition-colors flex items-center justify-between"
+                    className={`py-2.5 px-3 rounded-xl transition-colors flex items-center justify-between ${
+                      activeSection === link.href.replace('#', '')
+                        ? 'text-purple-600 dark:text-purple-300 font-semibold bg-purple-50 dark:bg-purple-500/10'
+                        : 'text-slate-700 dark:text-slate-200 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-slate-800/70'
+                    }`}
                   >
                     <span>{link.name}</span>
                     <ArrowUpRight className="w-4 h-4 opacity-50" />

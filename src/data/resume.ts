@@ -72,6 +72,8 @@ export const RESUME = {
     },
     {
       title: 'Patnaar | Mobile Engineer',
+      subtitle: 'patnaar.com',
+      url: 'https://patnaar.com',
       date: '02/2026 – 03/2026',
       location: 'Nigeria',
       bullets: [

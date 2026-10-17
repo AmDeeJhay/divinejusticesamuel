@@ -4,6 +4,7 @@ import swiftlyLogo from '../assets/images/swiftlyxpress-logo.png';
 import fraicheLogo from '../assets/images/fraiche-logo.png';
 import praciLogo from '../assets/images/praci-logo.svg';
 import appliftLogo from '../assets/images/applift-logo.png';
+import patnaarLogo from '../assets/images/patnaar-logo.png';
 import awsSbgLogo from '../assets/images/aws-sbg-logo.svg';
 import googleLogo from '../assets/images/google-logo.svg';
 
@@ -140,7 +141,8 @@ export const PORTFOLIO_DATA = {
       location: 'Nigeria',
       description:
         'All-in-one payroll and team payment platform that simplifies how businesses send, track, and manage employee payouts. Built the mobile app and its cloud infrastructure.',
-      // liveUrl: 'https://…',  // add when public
+      logo: patnaarLogo,
+      liveUrl: 'https://patnaar.com',
       technologies: ['React Native', 'Zustand', 'AWS'],
     },
     {
